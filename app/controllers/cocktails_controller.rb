@@ -6,6 +6,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @doses = sort_doses(@cocktail.doses.as_json)
   end
 
   def new
@@ -48,5 +49,20 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name)
+  end
+
+
+  def sort_doses(doses)
+    # @doses.sort! {|a, b| a.description <=> b.description }
+    doses.each_with_index do |dose, id|
+      found_index = Dose::DOSES.find_index { |desc| desc == dose["description"] }
+      unless found_index = doses.length
+        compare_index = Dose::DOSES.find_index { |desc| desc == doses[(id + 1)]["description"]}
+        if found_index > compare_index
+          doses[id], doses[id + 1] = doses[id + 1], doses[id]
+        end
+      end
+    end
+    return doses
   end
 end

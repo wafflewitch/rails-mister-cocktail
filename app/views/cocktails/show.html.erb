@@ -2,11 +2,12 @@
   <div class="row card">
     <h2><%= @cocktail.name %></h2>
     <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <li><%= dose %></li>
+      <% @doses.each do |dose| %>
+        <li><%= "#{dose['description']} #{Ingredient.find(dose['ingredient_id']).name}" %></li>
       <% end %>
     </ul>
   <ul class="list-inline">
+    <li><%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail), class: "btn btn-pink" %></li>
     <li><%= link_to "Delete", cocktail_path(@cocktail), method: :delete, class: "btn btn-pink" %></li>
     <li><%= link_to "Home", cocktails_path, class: "btn btn-pink" %></li>
     </ul>

@@ -13,3 +13,55 @@
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #ffe6ee;
+  text-align: center;
+}
+
+h1, h2, p {
+  font-family: Open Sans, Arial;
+  color: #e388a7;
+}
+
+a {
+  color: #E388A7;
+}
+
+a:hover {
+  color: #ff99bb;
+  text-decoration: none;
+}
+
+.card {
+  background-color: #F8F8F8;
+  color: #ff99bb;
+  text-align: center;
+  width: 600px;
+  padding: 7px;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.form-stuff {
+  width: 500px;
+}
+
+.btn-pink {
+  border-radius: 10px;
+  border: 1px solid #E388A7;
+  padding: 5px;
+}
+
+.btn-pink:hover {
+  color: #E388A7;
+  text-decoration: none;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
