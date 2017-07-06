@@ -1,0 +1,6 @@
+<div class="container text-center form-stuff">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, input_html: { placeholder: "Crazy Concoction" } %>
+    <%= f.submit class: "btn btn-pink" %>
+  <% end %>
+</div>

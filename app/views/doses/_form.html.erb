@@ -1,0 +1,10 @@
+<div class="container text-center form-stuff">
+  <%= simple_form_for [@cocktail, @dose, @ingredient] do |f| %>
+    <%= f.input :description, as: :select, collection: Ingredient.all, include_blank: "Select ingredient" %>
+    <%= f.input :description, as: :select, collection: Ingredient.all, include_blank:  "Select ingredient" %>
+    <%= f.input :description, as: :select, collection: Ingredient.all, include_blank: "Select ingredient" %>
+    <%= f.input :description, as: :select, collection: Ingredient.all, include_blank:  "Select ingredient" %>
+    <%= f.input :description, as: :select, collection: Ingredient.all, include_blank: "Select ingredient" %>
+    <%= f.submit class: "btn btn-pink" %>
+  <% end %>
+</div>
