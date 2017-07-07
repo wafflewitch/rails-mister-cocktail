@@ -1,0 +1,6 @@
+<div class="container text-center form-stuff">
+  <%= simple_form_for [@cocktail, @review] do |f| %>
+    <%= f.input :content, input_html: { placeholder: "type comment here" } %>
+    <%= link_to "Nevermind", cocktail_path(@cocktail), class: "btn btn-pink" %>&nbsp;<%= f.submit "Add Comment", class: "btn btn-pink" %>
+  <% end %>
+</div>

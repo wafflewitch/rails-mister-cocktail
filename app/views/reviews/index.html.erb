@@ -1,0 +1,10 @@
+<h1>Comments</h1>
+<div class="container text-center content-box">
+  <% @reviews.each do |review| %>
+  <div class="row card">
+    <p><%= review.content %></p>
+  </div>
+  <% end %>
+  <br>
+  <%= link_to "Write Comment", new_review_path(@cocktail), class: "btn btn-pink" %>&nbsp;<%= link_to "Back", cocktail_path(@cocktail), class: "btn btn-pink" %>
+</div>

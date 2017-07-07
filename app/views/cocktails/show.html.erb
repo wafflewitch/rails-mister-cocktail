@@ -7,11 +7,16 @@
         <li><%= "#{dose.description} #{dose.ingredient.name}" %></li>
       <% end %>
     </ul>
-  <ul class="list-inline">
-    <li><%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-pink" %></li>
-    <li><%= link_to "Add Photo", upload_photo_path(@cocktail), class: "btn btn-pink" %></li>
-    <li><%= link_to "Delete", cocktail_path(@cocktail), method: :delete, class: "btn btn-pink" %></li>
-    <li><%= link_to "Home", cocktails_path, class: "btn btn-pink" %></li>
-    </ul>
+    <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-pink" %>
+    &nbsp;
+    <%= link_to "Add Photo", upload_photo_path(@cocktail), class: "btn btn-pink" %>
+    <br>
+    <%= link_to "Write Comment", new_review_path(@cocktail), class: "btn btn-pink" %>
+    &nbsp;
+    <%= link_to "Read Comments", all_reviews_path(@cocktail), class: "btn btn-pink" %>
+    &nbsp;
+    <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, class: "btn btn-pink" %>
+    &nbsp;
+    <%= link_to "Home", cocktails_path, class: "btn btn-pink" %>
   </div>
 </div>
