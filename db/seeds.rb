@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-part_one = ["unicorn", "vampire", "mermaid", "centaur", "goblin", "werewolf", "wizard", "sugar", "chocolate", "caramel", "hazelnut", "vanilla", "strawberry", "awesome", "rainbow", "happiness", "sadness"]
+part_one = ["unicorn", "vampire", "mermaid", "fairy", "centaur", "goblin", "werewolf", "wizard", "sugar", "chocolate", "caramel", "hazelnut", "vanilla", "strawberry", "rainbow", "happiness", "sadness"]
 part_two = ["blood", "tears", "breath", "essence", "sauce", "flavoring", "sprinkles", "powder", "magic"]
 
 part_one.each do |one|

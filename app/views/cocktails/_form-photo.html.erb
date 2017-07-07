@@ -1,0 +1,8 @@
+<div class="container text-center form-stuff">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= link_to "Nevermind", cocktails_path, class: "btn btn-pink" %>&nbsp;
+    <%= f.submit "Upload Photo", class: "btn btn-pink" %>
+  <% end %>
+</div>

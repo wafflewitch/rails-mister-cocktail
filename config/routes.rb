@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   resources :doses, only: [ :destroy ]
 
+  get '/cocktails/:id/upload', to: 'cocktails#upload', as: 'upload_photo'
+
+  post '/cocktails/:id', to: 'cocktails#update'
+
   root "cocktails#index"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

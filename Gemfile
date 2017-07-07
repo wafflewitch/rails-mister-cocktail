@@ -8,6 +8,8 @@ end
 ruby '2.3.3'
 
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 gem 'faker'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'

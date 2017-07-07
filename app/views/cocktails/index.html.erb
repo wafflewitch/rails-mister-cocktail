@@ -1,10 +1,10 @@
-<h1>Creepy Cocktails</h1>
+<h1><%= image_tag "potion.png", width: 80 %>&nbsp;&nbsp;Creepy Cocktails&nbsp;&nbsp;<%= image_tag "potion.png", width: 80 %></h1>
 <br>
 <p><%= link_to "Create Cocktail", new_cocktail_path, class: "btn btn-pink" %></p>
 <div class="container text-center content-box">
   <% @cocktails.each do |cocktail| %>
   <div class="row card">
-    <h3><%= image_tag "potion.png" %><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+    <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
   </div>
   <% end %>
 </div>

@@ -1,12 +1,11 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_cocktail, only: [ :show, :edit, :upload, :update, :destroy ]
 
   def index
     @cocktails = Cocktail.all
   end
 
   def show
-    @doses = sort_doses(@cocktail.doses.as_json)
   end
 
   def new
@@ -25,14 +24,17 @@ class CocktailsController < ApplicationController
   def edit
   end
 
+  def upload
+  end
+
   def update
     respond_to do |format|
-      if @restaurant.update(restaurant_params)
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
-        format.json { render :show, status: :ok, location: @restaurant }
+      if @cocktail.update(cocktail_params)
+        format.html { redirect_to @cocktail, notice: 'Your cocktail was successfully updated.' }
+        format.json { render :show, status: :ok, location: @cocktail }
       else
         format.html { render :edit }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+        format.json { render json: @cocktail.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -49,21 +51,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
-  end
-
-
-  def sort_doses(doses)
-    # @doses.sort! {|a, b| a.description <=> b.description }
-    doses.each_with_index do |dose, id|
-      found_index = Dose::DOSES.find_index { |desc| desc == dose["description"] }
-      unless found_index = doses.length
-        compare_index = Dose::DOSES.find_index { |desc| desc == doses[(id + 1)]["description"]}
-        if found_index > compare_index
-          doses[id], doses[id + 1] = doses[id + 1], doses[id]
-        end
-      end
-    end
-    return doses
+    params.require(:cocktail).permit(:name, :photo, :photo_cache)
   end
 end
