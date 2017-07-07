@@ -4,8 +4,7 @@
 <div class="container text-center content-box">
   <% @cocktails.each do |cocktail| %>
   <div class="row card">
-    <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-    <img src="../../../../assets/images/potion.png" alt="a magic potion">
+    <h3><%= image_tag "potion.png" %><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
   </div>
   <% end %>
 </div>
