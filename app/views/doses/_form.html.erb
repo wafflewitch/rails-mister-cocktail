@@ -2,6 +2,6 @@
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description, as: :select, collection: Dose::DOSES, include_blank: "Select dosage" %>
     <%= f.input :ingredient_id, as: :select, collection: Ingredient.order(:name), include_blank: "Select ingredient" %>
-    <%= f.submit class: "btn btn-pink" %>
+    <%= f.submit class: "btn btn-pink" %>&nbsp;<%= link_to "Nevermind", cocktails_path, class: "btn btn-pink" %>
   <% end %>
 </div>

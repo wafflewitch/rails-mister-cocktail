@@ -8,32 +8,32 @@
 singular = ["unicorn", "vampire", "mermaid", "centaur", "goblin", "werewolf", "wizard", "sugar", "chocolate", "caramel", "hazelnut", "vanilla", "strawberry", "awesome", "rainbow", "happiness", "sadness"]
 plural = ["blood", "tears", "breath", "essence", "sauce", "flavoring", "sprinkles", "powder", "magic"]
 
-# 25.times do
-#   ingredient = Ingredient.create(name: "#{singular.sample} #{plural.sample}")
-#   p ingredient
-# end
+25.times do
+  ingredient = Ingredient.create(name: "#{singular.sample} #{plural.sample}")
+  p ingredient
+end
 
-# ingredient = Ingredient.create(name: "awesome sauce")
+ingredient = Ingredient.create(name: "awesome sauce")
 # p ingredient
-# ingredient = Ingredient.create(name: "unicorn tears")
+ingredient = Ingredient.create(name: "unicorn tears")
 # p ingredient
-# ingredient = Ingredient.create(name: "vampire blood")
+ingredient = Ingredient.create(name: "vampire blood")
 # p ingredient
-# ingredient = Ingredient.create(name: "magic sprinkles")
+ingredient = Ingredient.create(name: "magic sprinkles")
 # p ingredient
-# ingredient = Ingredient.create(name: "magic powder")
+ingredient = Ingredient.create(name: "magic powder")
 # p ingredient
-# ingredient = Ingredient.create(name: "vanilla essence")
+ingredient = Ingredient.create(name: "vanilla essence")
 # p ingredient
-# ingredient = Ingredient.create(name: "vanilla flavoring")
+ingredient = Ingredient.create(name: "vanilla flavoring")
 # p ingredient
-# ingredient = Ingredient.create(name: "caramel sauce")
+ingredient = Ingredient.create(name: "caramel sauce")
 # p ingredient
-# ingredient = Ingredient.create(name: "caramel flavoring")
+ingredient = Ingredient.create(name: "caramel flavoring")
 # p ingredient
-# ingredient = Ingredient.create(name: "rainbow sprinkles")
+ingredient = Ingredient.create(name: "rainbow sprinkles")
 # p ingredient
-# ingredient = Ingredient.create(name: "rainbow magic")
+ingredient = Ingredient.create(name: "rainbow magic")
 # p ingredient
-# ingredient = Ingredient.create(name: "rainbow sauce")
+ingredient = Ingredient.create(name: "rainbow sauce")
 # p ingredient
