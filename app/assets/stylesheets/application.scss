@@ -59,6 +59,7 @@ a:hover {
 }
 
 .btn-pink {
+  color: #ff99bb;
   background-color: white;
   border-radius: 10px;
   border: 1px solid #ff99bb;
@@ -66,8 +67,9 @@ a:hover {
 }
 
 .btn-pink:hover {
-  color: #E388A7;
-  border-color: #E388A7;
+  color: #ff99bb;
+  background-color: #ffe6ee;
+  border-color: none;
   text-decoration: none;
 }
 
