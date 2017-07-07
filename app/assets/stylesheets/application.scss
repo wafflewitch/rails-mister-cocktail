@@ -44,17 +44,30 @@ a:hover {
 }
 
 .form-stuff {
-  width: 500px;
+  width: 300px;
+  color: #ff99bb;
+}
+
+.form-control {
+  border-radius: 10px;
+  border-color: #ff99bb;
+  color: #ff99bb;
+}
+
+.form-control:focus {
+   border-color: #E388A7;
 }
 
 .btn-pink {
+  background-color: white;
   border-radius: 10px;
-  border: 1px solid #E388A7;
+  border: 1px solid #ff99bb;
   padding: 5px;
 }
 
 .btn-pink:hover {
   color: #E388A7;
+  border-color: #E388A7;
   text-decoration: none;
 }
 
