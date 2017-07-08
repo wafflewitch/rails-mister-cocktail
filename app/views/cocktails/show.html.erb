@@ -13,10 +13,13 @@
     <br>
     <%= link_to "Write Comment", new_review_path(@cocktail), class: "btn btn-pink" %>
     &nbsp;
-    <%= link_to "Read Comments", all_reviews_path(@cocktail), class: "btn btn-pink" %>
-    &nbsp;
     <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, class: "btn btn-pink" %>
     &nbsp;
     <%= link_to "Home", cocktails_path, class: "btn btn-pink" %>
   </div>
+  <% @cocktail.reviews.each do |review| %>
+    <div class="row card" id="comment-box">
+      <%= review.content %>
+    </div>
+  <% end %>
 </div>
